@@ -1,4 +1,4 @@
-
+let testBut = document.getElementById('test');
 
 
 let myLibrary = [];
@@ -46,4 +46,15 @@ const createBookCard = (book) => {
     const buttonGroup = document.createElement('div')
     const readBtn = document.createElement('button')
     const removeBtn = document.createElement('button')
+
+
+    title.textContent = `"${book.title}"`;
+    author.textContent = book.author;
+    pages.textContent = `${book.pages} pages`
 }
+
+testBut.addEventListener('click', function () {
+    createBookCard();
+    console.log("butt");
+    return;
+})
