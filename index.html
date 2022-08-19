@@ -9,33 +9,38 @@
 
 <body>
 
-    <div class="book-submit">
-        <input type="text" id="title" placeholder="Title: ">
-        <input type="text" id="author" placeholder="Author: ">
-        <input type="text" id="pages" placeholder="Pages: ">
-        <div class="button-cont">
-            <p>Have Read?</p>
-            <input id="read" type="checkbox">
+    <button id="addBtn">+ Add Book</button>
+
+
+
+
+    <div class="flex-cont">
+
+        <div id="form1" class="submission">
+
+            <div class="book-submit">
+                <input type="text" id="title" placeholder="Title: ">
+                <input type="text" id="author" placeholder="Author: ">
+                <input type="text" id="pages" placeholder="Pages: ">
+                <div class="button-cont">
+                    <p>Have Read?</p>
+                    <input id="read" type="checkbox">
+
+
+                </div>
+                <button type="submit">Submit</button>
+            </div>
 
 
         </div>
-        <button type="submit">Submit</button>
-
+        <div id="form2" class="overlay"></div>
     </div>
 
-    <button id="test">Test</button>
-    <!--
+    <div class="book-grid" id="bookDisplay">
 
 
-    <div class="book">
-        <p>Title: Harry Potter </p>
-        <p>Author: J.K Rowling</p>
-        <p>Page Count: 379</p>
-        <p>Have read? Yes</p>
-    </div>
--->
 
-    <script src="library.js"></script>
+        <script src="library.js"></script>
 </body>
 
 </html>
