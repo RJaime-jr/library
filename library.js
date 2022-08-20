@@ -2,6 +2,7 @@ const addBut = document.getElementById('addBtn');
 const bookGrid = document.getElementById('bookDisplay');
 const active1 = document.getElementById('form1');
 const active2 = document.getElementById('form2');
+const overlay = document.getElementsByClassName('overlay');
 
 
 let myLibrary = [];
@@ -30,16 +31,7 @@ function addBookToLibrary() {
 }
 
 let animal = new Book("Zoo", "Rico Jaime", 200, true);
-/*
-console.log(animal.title);
 
-console.log(animal.author);
-
-console.log(animal.pages);
-console.log(animal.read);
-console.log(animal.info);
-//console.log(animal.info);
-*/
 
 const createBookCard = (book) => {
     const bookCard = document.createElement('div');
@@ -64,20 +56,35 @@ const createBookCard = (book) => {
 
 }
 
-addBut.addEventListener('click', function () {
 
-    //createBookCard(animal);
-
+function openBookForm() {
     active1.classList.add("active");
     active2.classList.add("active");
 
     console.log("A");
+}
 
 
-    return;
-})
+
+
+function closeOverlay() {
+    active1.classList.remove("active");
+    active2.classList.remove("active");
+    console.log("B");
+}
+
+
+// Button & overlay click that turns off and on the form
+addBut.onclick = openBookForm;
+active2.onclick = closeOverlay;
+
 
 /*
 active1.classList.remove("active");
         active2.classList.remove("active");
 */
+createBookCard(animal);
+createBookCard(animal);
+createBookCard(animal);
+createBookCard(animal);
+createBookCard(animal);

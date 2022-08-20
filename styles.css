@@ -46,10 +46,11 @@ html {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: (repeat(1fr, 3));
+    padding: 40px;
 }
 
 #addBtn {
-    position: fixed;
+    /*position: fixed;*/
     width: 200px;
     height: 100px;
     font-size: 30px;
@@ -95,4 +96,5 @@ html {
 .flex-cont {
     display: flex;
     flex-direction: row;
+    justify-content: center;
 }
