@@ -17,15 +17,15 @@
 
     <div class="flex-cont">
 
-        <div id="form1" class="submission">
+        <form id="form-data" class="submission">
 
             <div class="book-submit">
-                <input type="text" id="title" placeholder="Title: ">
-                <input type="text" id="author" placeholder="Author: ">
-                <input type="text" id="pages" placeholder="Pages: ">
+                <input type="text" id="title" name="title" placeholder="Title: ">
+                <input type="text" id="author" name="author" placeholder="Author: ">
+                <input type="text" id="pages" name="pages" placeholder="Pages: ">
                 <div class="button-cont">
                     <p>Have Read?</p>
-                    <input id="read" type="checkbox">
+                    <input id="read" name="read" type="checkbox">
 
 
                 </div>
@@ -33,8 +33,8 @@
             </div>
 
 
-        </div>
-        <div id="form2" class="overlay"></div>
+        </form>
+        <div id="overlay" class="overlay"></div>
     </div>
 
     <div class="book-grid" id="bookDisplay">

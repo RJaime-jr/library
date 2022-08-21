@@ -1,8 +1,12 @@
 const addBut = document.getElementById('addBtn');
 const bookGrid = document.getElementById('bookDisplay');
-const active1 = document.getElementById('form1');
-const active2 = document.getElementById('form2');
-const overlay = document.getElementsByClassName('overlay');
+const form = document.getElementById('form-data');
+const overlay = document.getElementById('overlay');
+let bookCardCount = 0;
+
+
+
+let animal = new Book("Zoo", "Rico Jaime", 200, true);
 
 
 let myLibrary = [];
@@ -12,25 +16,20 @@ function Book(title, author, pages, read) {
     this.author = author;
     this.pages = pages;
     this.read = read;
-
-    this.info = function () {
-        let hasRead = "not read yet";
-        if (read == true) {
-            hasRead = "have read";
-
-        }
-
-        console.log(title + " by " + author + " ,has " + pages + " many pages, " + hasRead);
-    }
 }
 
 
 
-function addBookToLibrary() {
-    // do stuff here
+function addBookToLibrary(book) {
+    myLibrary.push(book);
 }
 
-let animal = new Book("Zoo", "Rico Jaime", 200, true);
+function showLibrary() {
+    createBookCard(myLibrary[bookCardCount]);
+    bookCardCount++;
+
+
+}
 
 
 const createBookCard = (book) => {
@@ -58,33 +57,46 @@ const createBookCard = (book) => {
 
 
 function openBookForm() {
-    active1.classList.add("active");
-    active2.classList.add("active");
+    form.classList.add("active");
+    overlay.classList.add("active");
 
     console.log("A");
+    /*
+    addBookToLibrary();
+    showLibrary();
+    */
+    console.log(myLibrary.length);
 }
 
 
 
 
 function closeOverlay() {
-    active1.classList.remove("active");
-    active2.classList.remove("active");
+    form.classList.remove("active");
+    overlay.classList.remove("active");
     console.log("B");
 }
 
 
 // Button & overlay click that turns off and on the form
 addBut.onclick = openBookForm;
-active2.onclick = closeOverlay;
+overlay.onclick = closeOverlay;
 
 
-/*
-active1.classList.remove("active");
-        active2.classList.remove("active");
-*/
-createBookCard(animal);
-createBookCard(animal);
-createBookCard(animal);
-createBookCard(animal);
-createBookCard(animal);
+
+form.addEventListener('submit', cardFromForm);
+
+function cardFromForm(event) {
+    event.preventDefault();
+
+    const myFormData = new FormData(event.target);
+
+    const formDataObj = Object.fromEntries(myFormData.entries());
+    //let book = new Book(formDataObj);
+
+    addBookToLibrary(formDataObj);
+    showLibrary();
+
+    console.log(formDataObj);
+};
+
