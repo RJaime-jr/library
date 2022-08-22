@@ -1,5 +1,7 @@
 html {
-    background-color: beige;
+    background-color: #ccd5ae;
+    font-family: Nunito, sans-serif;
+    color: #93714E;
 }
 
 .body {
@@ -12,18 +14,19 @@ html {
 
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    padding-left: 20px;
-    text-align: start;
-    height: 200px;
-    width: 200px;
-    background-color: #f3cc9c;
+    justify-content: center;
+    text-align: center;
+    height: 280px;
+    width: 220px;
+    background-color: #E9EDC9;
     border-radius: 20px;
+
 
 }
 
+
 .book-submit {
-    background-color: #f3cc9c;
+    background-color: #E9EDC9;
     display: flex;
     flex-direction: column;
     padding-left: 20px;
@@ -35,9 +38,16 @@ html {
 
 }
 
+.submit-but {
+    width: 200px;
+    height: 30px;
+    align-self: center;
+
+}
+
 .button-cont {
     display: flex;
-    justify-content: start;
+    justify-content: space-between;
 }
 
 .book-grid {
@@ -50,13 +60,14 @@ html {
 }
 
 #addBtn {
-    /*position: fixed;*/
     width: 200px;
     height: 100px;
     font-size: 30px;
-    background-color: aquamarine;
-
+    background-color: #FEFAE0;
+    color: #93714E;
     left: 45%;
+
+    border-radius: 8px;
 }
 
 #title {}
@@ -97,4 +108,32 @@ html {
     display: flex;
     flex-direction: row;
     justify-content: center;
+}
+
+.btn {
+    background-color: #FAEDCD;
+    width: 200px;
+    height: 40px;
+    border-radius: 8px;
+    color: #
+}
+
+.color-red {
+    background-color: rgba(240, 92, 92, 0.801);
+
+}
+
+.color-green {
+    background-color: #70fa92cb;
+
+}
+
+.card-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 200px;
+
+
 }
